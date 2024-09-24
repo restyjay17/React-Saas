@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: 0;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: var(--font-family);
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    position: relative;
+    color: var(--color-text);
+    background-color: #fff;    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F5F5F5;
 }
 
-.App-link {
-  color: #61dafb;
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-main);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+/**
+ * ----------------------------------------
+ * sweetalert
+ * ----------------------------------------
+ */
+.swal2-container {
+    background: rgba(0, 0, 0, .8) !important;
+}
+
+body.swal2-toast-shown .swal2-container {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.swal2-container .swal2-toast {
+    background: #101010 !important;
+    border: 2px solid #fa9a21;
+}
+
+.swal2-container .swal2-toast .swal2-title {
+    color: #5e6168;
+}
+
+.swal2-timer-progress-bar {
+    background: rgb(0 123 255 / 50%) !important;
+}
+
+.swal2-container .swal2-modal {
+    padding-bottom: 1rem;
+    background: #101010 !important;
+    border: 2px solid #fa9a21 !important;
+}
+
+.swal2-container .swal2-modal .swal2-icon {
+    margin-top: 1em !important;
+}
+
+.swal2-container .swal2-modal .swal2-html-container {
+    color: #5e6168;
+    margin-top: 0 !important;
+    overflow: unset;
+}
+
+.swal2-container .swal2-modal .swal2-actions {
+    margin-top: 0.5rem;
+}
+
+.swal2-container .swal2-modal .swal2-actions button {
+    padding: 5px 0.5rem;
+    box-shadow: none;
+}
+
+.swal2-container .swal2-modal .swal2-actions button.swal2-confirm {
+    background: #007bff !important;
+}
+
+.swal2-container .swal2-modal .swal2-actions button.swal2-cancel {
+    background: #dc3545 !important;
 }
